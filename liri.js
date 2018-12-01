@@ -1,7 +1,7 @@
 require('dotenv').config();
 var keys = require('./keys.js');
 var Spotify = require('node-spotify-api');
-//var fs = require('fs');
+var fs = require('fs');
 //var spotify = new Spotify(keys.spotify);
 var axios = require("axios");
 var nodeArgs = process.argv;
@@ -29,9 +29,19 @@ else if (process.argv[2] == 'spotify-this-song') {
     spotify(inputName);
 }
 
+else if (process.argv[2] == 'do-What-It-Says') {
+    doWhatItSays();
+}
+
 else {
     console.log('Try Again');
 }
+
+function doWhatItSays() {
+    fs.readFile("random.txt", "utf8", function (error, data) {
+        spotify(data);
+    })
+  }
 
 function movieDisplay(movieName) {
 
@@ -73,7 +83,7 @@ function spotify(songName) {
     var spotify = new Spotify(keys.spotify)
 
     spotify
-        .search({ type: 'track', query: songName, limit: 1 })
+        .search({ type: 'track', query: songName, limit: 5 })
         .then(function (response) {
             for (i = 0; i < response.tracks.items.length; i++) {
                 console.log("Album: "+ response.tracks.items[i].album.name);
