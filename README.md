@@ -11,7 +11,8 @@ Other modules used :
 <li>fs</li>
 <li>moment  </li>  
 
-<b>Instruction to Run the app</b>
+
+<b>Instructions to Run the app</b>
 
 Use the following commands to run the application
 Type in the terminal
