@@ -24,7 +24,8 @@ Type in the terminal
 
 3. node liri.js movie-this "movie name here" to return movie information from OMDb. 
     eg:node liri.js movie-this Frozen
-    Note : If no movie is entered, it returns a default movie.
+                  
+   (Note : If no movie is entered, it returns a default movie.)
 
 
 4. node liri.js do-What-it-says to return data stored in random.txt
