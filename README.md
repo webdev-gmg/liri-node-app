@@ -20,4 +20,4 @@ node liri.js movie-this "movie name here" to return movie information from OMDb.
 node liri.js do-what-it-says to return data stored in random.txt
 
 
-(https://github.com/webdev-gmg/liri-node-app/blob/master/images/spotify.jpg?raw=true)
+![Spotify](https://github.com/webdev-gmg/liri-node-app/blob/master/images/spotify.jpg?raw=true)
