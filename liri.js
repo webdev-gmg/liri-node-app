@@ -2,10 +2,12 @@ require('dotenv').config();
 var keys = require('./keys.js');
 var Spotify = require('node-spotify-api');
 var fs = require('fs');
-//var spotify = new Spotify(keys.spotify);
+var moment = require('moment');
 var axios = require("axios");
 var nodeArgs = process.argv;
 var inputName = "";
+
+
 for (var i = 3; i < nodeArgs.length; i++) {
 
     if (i > 3 && i < nodeArgs.length) {
@@ -72,7 +74,7 @@ function artistDisplay(artist) {
                 for (i = 0; i < response.data.length; i++) {
                     console.log("Venue Name: " + response.data[i].venue.name);
                     console.log("Venue Location: " + response.data[i].venue.city);
-                    console.log("Venue Date: " + response.data[i].datetime);
+                    console.log("Venue Date: " + moment(response.data[i].datetime).format("MM/DD/YYYY"));
                 }
             }
         );
