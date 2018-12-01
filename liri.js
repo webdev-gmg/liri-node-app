@@ -69,21 +69,17 @@ function artistDisplay(artist) {
 }
 
 function spotify(songName) {
-    
+
     var spotify = new Spotify(keys.spotify)
 
-    // var spotify = new Spotify({
-    //     id: "d127e4dbccfb4c80aa9146b3c4154577",
-    //     secret: "212bdd2c37674e9eaf8944d1bfc943fb"
-    // });
-
     spotify
-        .search({ type: 'track', query: songName, limit: 5 })
+        .search({ type: 'track', query: songName, limit: 1 })
         .then(function (response) {
             for (i = 0; i < response.tracks.items.length; i++) {
+                console.log("Album: "+ response.tracks.items[i].album.name);
                 console.log("Artist: " + response.tracks.items[i].artists[0].name);
-                console.log("Name: " + response.tracks.items[i].name);
-                console.log("External Link: " + response.tracks.items[i].external_urls.spotify);
+                console.log("Album: " + response.tracks.items[i].name);
+                console.log("Preview: " + response.tracks.items[i].external_urls.spotify);
             }
         })
         .catch(function (err) {
