@@ -21,3 +21,6 @@ node liri.js do-what-it-says to return data stored in random.txt
 
 
 ![Spotify](https://github.com/webdev-gmg/liri-node-app/blob/master/images/spotify.jpg?raw=true)
+![Bands](https://github.com/webdev-gmg/liri-node-app/blob/master/images/bands.png?raw=true)
+![Movies](https://github.com/webdev-gmg/liri-node-app/blob/master/images/movie.png?raw=true)
+![Random](https://github.com/webdev-gmg/liri-node-app/blob/master/images/dowhatitsays.png?raw=true)
